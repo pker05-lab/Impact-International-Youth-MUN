@@ -1,0 +1,3 @@
+const menuToggle=document.querySelector(".menu-toggle");const siteNav=document.querySelector(".site-nav");
+if(menuToggle&&siteNav){menuToggle.addEventListener("click",()=>{const open=siteNav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open));menuToggle.setAttribute("aria-label",open?"Close navigation":"Open navigation")});siteNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{siteNav.classList.remove("open");menuToggle.setAttribute("aria-expanded","false")}))}
+document.querySelectorAll(".season").forEach(season=>season.addEventListener("toggle",()=>{if(season.open)document.querySelectorAll(".season[open]").forEach(other=>{if(other!==season)other.open=false})}));
