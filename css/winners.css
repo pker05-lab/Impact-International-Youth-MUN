@@ -63,3 +63,63 @@
   .personalised-section{padding-top:70px;padding-bottom:70px}
   .join-section{padding-top:85px;padding-bottom:85px}
 }
+.season-team-photo {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid var(--line);
+}
+
+.season-team-heading {
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.season-team-heading h3 {
+  margin: 8px 0 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 500;
+  color: var(--green-950);
+}
+
+.season-team-heading p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.team-photo-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--green-900);
+  border: 1px solid var(--line);
+}
+
+.team-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.team-photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .season-team-photo {
+    margin-top: 55px;
+    padding-top: 45px;
+  }
+
+  .team-photo-frame img {
+    aspect-ratio: 4 / 3;
+  }
+}
