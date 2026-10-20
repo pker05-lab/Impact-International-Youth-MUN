@@ -211,3 +211,45 @@ h1 span { color:var(--green-700); }
   display: block;
   opacity: 1;
 }
+/* Season Arrow Navigation Header */
+.season-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 52px;
+  border-bottom: 1px solid rgba(255, 250, 240, 0.15);
+  padding-bottom: 24px;
+}
+
+.season-header-info h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  letter-spacing: -.04em;
+}
+
+.season-arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.season-arrow-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 250, 240, 0.2);
+  background: rgba(255, 250, 240, 0.05);
+  color: var(--paper);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.season-arrow-btn:hover {
+  background: var(--gold);
+  color: var(--green-950);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
