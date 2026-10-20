@@ -169,3 +169,45 @@ h1 span { color:var(--green-700); }
   .process { margin-left:10px; }
   .footer-links { flex-wrap:wrap; }
 }
+
+/* Season Switcher Styles */
+.season-switcher {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+}
+
+.season-btn {
+  background: rgba(255, 250, 240, 0.08);
+  border: 1px solid rgba(255, 250, 240, 0.15);
+  color: var(--paper);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.season-btn:hover {
+  background: rgba(255, 250, 240, 0.15);
+}
+
+.season-btn.active {
+  background: var(--gold);
+  color: var(--green-950);
+  border-color: var(--gold);
+}
+
+/* Season Content Visibility Toggles */
+.season-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.season-content.active {
+  display: block;
+  opacity: 1;
+}
