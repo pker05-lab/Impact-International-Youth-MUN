@@ -80,3 +80,27 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+// Season Switcher Functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const seasonButtons = document.querySelectorAll('.season-btn');
+  const seasonContents = document.querySelectorAll('.season-content');
+
+  seasonButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetSeason = button.getAttribute('data-season');
+
+      // Update active button state
+      seasonButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Switch displayed season content
+      seasonContents.forEach(content => {
+        content.classList.remove('active');
+        if (content.id === `${targetSeason}-content`) {
+          content.classList.add('active');
+        }
+      });
+    });
+  });
+});
